@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foodapp/constants.dart';
+import 'package:foodapp/utils/constants.dart';
 
 class AdminChatBubble extends StatelessWidget {
   AdminChatBubble({super.key, required this.message});

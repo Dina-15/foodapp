@@ -1,10 +1,15 @@
-class Message{
+class Message {
   String message;
   String id;
-  Message(this.message, this.id);
+  String date;
 
-  factory Message.fromJson(json)
-  {
-    return Message(json['message'], json['id']);
+  Message({required this.message, required this.id, required this.date});
+  factory Message.fromJson(json) {
+    return Message(
+        message: json['message'], id: json['id'], date: json['date'].toString());
+  }
+
+  Map<String, dynamic> toJson() {
+    return {'message': message, 'id': id, 'date': date};
   }
 }
